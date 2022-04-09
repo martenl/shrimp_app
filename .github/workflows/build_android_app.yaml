@@ -3,7 +3,7 @@ name: Build Android App
 on: [push]
 
 jobs:
-  build:
+  build-android-app:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,6 +15,6 @@ jobs:
         with:
           flutter-version: '2.5.3'
       - run: flutter pub get
-      - run: flutter test
+      #- run: flutter test
       - run: flutter build apk
       - run: flutter build appbundle
